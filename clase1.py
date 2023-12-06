@@ -29,3 +29,4 @@ valor1= int(input("Ingrese el primer valor: "))
 valor2= float(input("Ingrese el segundo valor: "))
 
 print("el resultado de la suma es:", valor1+valor2)
+
