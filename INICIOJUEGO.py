@@ -1,11 +1,16 @@
 #PIEDRA PAPEL O TIJERA
-#El juego consiste en que la computadora y el jugador toamran una de las tres opciones. y el
+#El juego consiste en que la computadora y el jugador tomaran una de las tres opciones. y el
 #programa determinará quien de los dos ganó, o quien perdió o en el último de los casos si hubo empate.
 #el jugador podra jugar las veces que desee o bien hasta que lo finalice.
 
+#con este comando la computadora podra elegir aleatoriamente su elección
 import random
+
+#este comando podremos dar tiempo de respuesta a la eleccion del computador 
 import time
 from time import sleep
+
+#aqui definimos la diferentes funciones para que el juego funcione
 def eleccion_computadora():
     numero_random=random.randint(0,2)
     opciones=["PIEDRA", "PAPEL", "TIJERAS"]
@@ -19,7 +24,7 @@ def obtenerResultados(eleccion_pc, eleccion_jugador):
         print("\t\t\t :-( PERDISTE :-(")
     elif(eleccion_pc=="PAPEL" and eleccion_jugador=="PIEDRA"):
         print("\t\t\t :-( PERDISTE :-(")
-    elif(eleccion_pc=="TIJERA" and eleccion_jugador=="PAPEL"):
+    elif(eleccion_pc=="TIJERAS" and eleccion_jugador=="PAPEL"):
         print("\t\t\t :-( PERDISTE :-(")
     elif(eleccion_pc=="PIEDRA" and eleccion_jugador=="PAPEL"):
         print("\t\t\t :-D GANASTE :-D")
@@ -32,6 +37,8 @@ def obtenerResultados(eleccion_pc, eleccion_jugador):
 
 print("\t\t\tJUEGO PIEDRA PAPEL O TIJERAS\n Intenta ganar las veces que quieras!!")
 x="s"
+
+#con este comando podremos jugar las veces que queramos o hasta que queramos finalizar el juego
 while x!="n" and x!="N":
     print("Elija una opcion\nPiedra \nPapel \nTijeras")
     eleccion_jugador=input("\tElija una opción->").upper()
