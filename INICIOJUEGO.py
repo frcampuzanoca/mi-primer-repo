@@ -3,14 +3,20 @@
 #programa determinará quien de los dos ganó, o quien perdió o en el último de los casos si hubo empate.
 #el jugador podra jugar las veces que desee o bien hasta que lo finalice.
 
-#con este comando la computadora podra elegir aleatoriamente su elección
+#importamos la libreria random, que se utiliza para generar números aleatorios.
 import random
 
-#este comando podremos dar tiempo de respuesta a la eleccion del computador 
+#importamos la libreria time, que se utiliza para manejar el tiempo en el programa
 import time
+
+#importa la función sleep de la libreria time, que se utiliza para hacer una pausa en el programa.
 from time import sleep
 
-#aqui definimos la diferentes funciones para que el juego funcione
+#aqui definimos la diferentes funciones para que el juego 
+#genera un número aleatorio entre 0 y 2 y lo asigna a la variable numero_random.
+#crea una lista llamada opciones con las opciones posibles para el juego.
+#asigna el valor de la opción seleccionada aleatoriamente a la variable x.
+#devuelve el valor de x.
 def eleccion_computadora():
     numero_random=random.randint(0,2)
     opciones=["PIEDRA", "PAPEL", "TIJERAS"]
@@ -38,7 +44,8 @@ def obtenerResultados(eleccion_pc, eleccion_jugador):
 print("\t\t\tJUEGO PIEDRA PAPEL O TIJERAS\n Intenta ganar las veces que quieras!!")
 x="s"
 
-#con este comando podremos jugar las veces que queramos o hasta que queramos finalizar el juego
+#utilizamo el bucle while de esta manera podemos utilizar el juego de manera indefinida hasta que el jugardor desee
+# upper solicita al jugador que ingrese una opción y lo convierte a mayúsculas.
 while x!="n" and x!="N":
     print("Elija una opcion\nPiedra \nPapel \nTijeras")
     eleccion_jugador=input("\tElija una opción->").upper()
